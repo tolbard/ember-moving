@@ -1,0 +1,24 @@
+ Base classes for jQueryMobile Support
+
+ This Librairy actually add some specifics View and one Controller to emberjs
+ 
+ Require: emberjs, jquery, jquery mobile and the css file for all the previous librairy
+ 
+ This code is base of the work of LuisSala to see his code go to  https://github.com/LuisSala/emberjs-jqm
+
+ Any help will be welcome...
+
+ List of the added class (abstract are omitted):
+
+  - Ember.PageView is the conterpart of the page element in JQMobile.
+
+  - Ember.HeaderView is the conterpart of the toolbar header element in JQMobile.
+
+  - Ember.ContentView is the conterpart of the content element in JQMobile.
+
+  - Ember.FooterView is the conterpart of the toolbar Footer element in JQMobile.
+
+  - Ember.ListItemView is the conterpart of the element of a List View in JQMobile.
+
+  - Ember.ListView is the conterpart of a List View in JQMobile.
+
