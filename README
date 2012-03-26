@@ -22,3 +22,51 @@
 
   - Ember.ListView is the conterpart of a List View in JQMobile.
 
+First be sure to look at the proof of concept from LuisSala at  https://github.com/LuisSala/emberjs-jqm
+
+How to use it :
+
+In you html file define your view as follow :
+
+  <script type="text/x-handlebars" data-template-name="main">
+
+    {{#view App.HeaderView}}
+        <h1>EIReader (Easy Internet Reader)</h1>
+    {{/view}}
+
+    {{#view App.MyView}}
+      {{#view App.Button target="App.seriesControler" action="addMore"}}Add More Items{{/view}}
+      <br/>
+      {{#collection App.ListView contentBinding="App.seriesControler"}}
+        <a href="#">
+            <b>{{content.title}}</b> <small>{{content.description}} ({{content.nbChapter}} chapters)</small>
+        </a>
+      {{/collection}}
+    {{/view}}
+
+    {{#view App.FooterView}}
+      Footer
+    {{/view}}
+
+  </script>
+
+  In your App.js you should use the new View and Controller
+
+	App = Em.Application.create();
+
+
+	App.MyView = Em.ContentView.extend({
+
+	});
+
+	App.HeaderView = Em.HeaderView.extend({
+
+	});
+
+	App.FooterView = Em.FooterView.extend({
+
+	});
+	
+	App.ListView = Em.ListView.extend({});
+
+I am currently working of a app using this library and I will create a new repo for it as soon as possible.
