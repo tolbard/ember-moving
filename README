@@ -1,4 +1,4 @@
-*Base classes for jQueryMobile Support
+Base classes for jQueryMobile Support
 
  This Librairy actually add some specifics View and one Controller to emberjs
  
@@ -10,22 +10,22 @@
 
  List of the added class (abstract are omitted):
 
-* Ember.PageView is the conterpart of the page element in JQMobile.
+  - Ember.PageView is the conterpart of the page element in JQMobile.
 
-* Ember.HeaderView is the conterpart of the toolbar header element in JQMobile.
+  - Ember.HeaderView is the conterpart of the toolbar header element in JQMobile.
 
-* Ember.ContentView is the conterpart of the content element in JQMobile.
+  - Ember.ContentView is the conterpart of the content element in JQMobile.
 
-* Ember.FooterView is the conterpart of the toolbar Footer element in JQMobile.
+  - Ember.FooterView is the conterpart of the toolbar Footer element in JQMobile.
 
-* Ember.ListItemView is the conterpart of the element of a List View in JQMobile.
+  - Ember.ListItemView is the conterpart of the element of a List View in JQMobile.
 
-* Ember.ListView is the conterpart of a List View in JQMobile.
+  - Ember.ListView is the conterpart of a List View in JQMobile.
 
 First be sure to look at the proof of concept from LuisSala at  https://github.com/LuisSala/emberjs-jqm
 
 How to use it :
-```html
+
 In you html file define your view as follow :
 
   <script type="text/x-handlebars" data-template-name="main">
@@ -49,10 +49,9 @@ In you html file define your view as follow :
     {{/view}}
 
   </script>
-```
 
   In your App.js you should use the new View and Controller
-```javascript
+
 	App = Em.Application.create();
 
 
@@ -69,6 +68,5 @@ In you html file define your view as follow :
 	});
 	
 	App.ListView = Em.ListView.extend({});
-```
 
 I am currently working of a app using this library and I will create a new repo for it as soon as possible.
