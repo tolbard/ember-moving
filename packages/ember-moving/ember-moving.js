@@ -26,7 +26,8 @@
 */
 
 	Ember.MobileBaseView = Ember.View.extend({
-		attributeBindings:['data-role']
+		attributeBindings:['data-role', 'data-theme'],
+		'data-theme': 'a'
 	});
 })({});
 
@@ -187,15 +188,14 @@
 	Ember.ListItemView = Ember.View.extend({
 		tagName: 'li'/*,
 		classNames: [],
-		attributeBindings:['data-corners','data-shadow','data-inline','data-wrapperels','data-icon','data-theme'],
+		attributeBindings:['data-corners','data-shadow','data-inline','data-wrapperels','data-icon'],
 		'data-corners':'false',
 		'data-shadow':'false',
 		'data-iconshadow':'true',
 		'data-inline':'false',
 		'data-wrapperels':'div',
 		'data-icon':'arrow-r',
-		'data-iconpos':'right',
-		'data-theme':'a'*/
+		'data-iconpos':'right'*/
 
 	});
 })({});
@@ -238,7 +238,7 @@
     contentLengthDidChange: function(){
         var _self = this;
         Em.run.next(function() {
-			console.log("listview changed: listview('refresh')" );
+			_self.$().listview('refresh');
         });
     }.observes('content.length')
 });
