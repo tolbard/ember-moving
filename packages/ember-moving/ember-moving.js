@@ -185,7 +185,7 @@
   @extends Ember.View
 */
 
-	Ember.ListItemView = Ember.View.extend({
+	Ember.ListItemView = Ember.MobileBaseView.extend({
 		tagName: 'li'/*,
 		classNames: [],
 		attributeBindings:['data-corners','data-shadow','data-inline','data-wrapperels','data-icon'],
@@ -218,7 +218,7 @@
 */
 
 	Ember.ListView = Ember.CollectionView.extend({
-    attributeBindings: ['data-role'],
+    attributeBindings: ['data-role', 'data-theme'],
     'data-role':'listview',
     tagName: 'ul',
     itemViewClass: Ember.ListItemView,
