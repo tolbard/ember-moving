@@ -10,17 +10,17 @@ Base classes for jQueryMobile Support
 
  List of the added class (abstract are omitted):
 
-  - Ember.PageView is the conterpart of the page element in JQMobile.
+  - Mov.PageView is the conterpart of the page element in JQMobile.
 
-  - Ember.HeaderView is the conterpart of the toolbar header element in JQMobile.
+  - Mov.HeaderView is the conterpart of the toolbar header element in JQMobile.
 
-  - Ember.ContentView is the conterpart of the content element in JQMobile.
+  - Mov.ContentView is the conterpart of the content element in JQMobile.
 
-  - Ember.FooterView is the conterpart of the toolbar Footer element in JQMobile.
+  - Mov.FooterView is the conterpart of the toolbar Footer element in JQMobile.
 
-  - Ember.ListItemView is the conterpart of the element of a List View in JQMobile.
+  - Mov.ListItemView is the conterpart of the element of a List View in JQMobile.
 
-  - Ember.ListView is the conterpart of a List View in JQMobile.
+  - Mov.ListView is the conterpart of a List View in JQMobile.
 
 First be sure to look at the proof of concept from LuisSala at  https://github.com/LuisSala/emberjs-jqm
 
@@ -55,18 +55,18 @@ In you html file define your view as follow :
 	App = Em.Application.create();
 
 
-	App.MyView = Em.ContentView.extend({
+	App.MyView = Mov.ContentView.extend({
 
 	});
 
-	App.HeaderView = Em.HeaderView.extend({
+	App.HeaderView = Mov.HeaderView.extend({
 
 	});
 
-	App.FooterView = Em.FooterView.extend({
+	App.FooterView = Mov.FooterView.extend({
 
 	});
 	
-	App.ListView = Em.ListView.extend({});
+	App.ListView = Mov.ListView.extend({});
 
 I am currently working of a app using this library and I will create a new repo for it as soon as possible.
