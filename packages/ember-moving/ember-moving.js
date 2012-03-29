@@ -6,7 +6,6 @@
 //------------------------------------------------
 // mix with jquery mobile
 
-(function(exports) {
 // ==========================================================================
 // Project:  Ember - JQ Mobile
 // Copyright: ©2012 Tolbard and contributors.
@@ -15,7 +14,7 @@
 /**
   @class
 
-  Ember.MobileBaseView is just a basic class for all the commun attribut in
+  EmberMoving.MobileBaseView is just a basic class for all the commun attribut in
   JQMobile.
 
   Note: As of this writing, `MobileBaseView` only add some bidding to its 
@@ -24,14 +23,13 @@
 
   @extends Ember.View
 */
+Mov = EmberMoving = Ember.Namespace.create()
 
-	Ember.MobileBaseView = Ember.View.extend({
+	EmberMoving.MobileBaseView = Ember.View.extend({
 		attributeBindings:['data-role', 'data-theme'],
 		'data-theme': 'a'
 	});
-})({});
 
-(function(exports) {
 // ==========================================================================
 // Project:  Ember - JQ Mobile
 // Copyright: ©2012 Tolbard and contributors.
@@ -45,15 +43,13 @@
   Note: The plan is to add additional all the specific page attributs
   attribut (with the default value)for the page jqm element.
 
-  @extends Ember.MobileBaseView
+  @extends EmberMoving.MobileBaseView
 */
 
-	Ember.PageView = Ember.MobileBaseView.extend({
+	EmberMoving.PageView = EmberMoving.MobileBaseView.extend({
 		'data-role': 'page'
 	});
-})({});
 
-(function(exports) {
 // ==========================================================================
 // Project:  Ember - JQ Mobile
 // Copyright: ©2012 Tolbard and contributors.
@@ -68,10 +64,10 @@
   Note: The plan is to add additional all the specific page attributs
   attribut (with the default value)for the toolbar jqm element.
 
-  @extends Ember.MobileBaseView
+  @extends EmberMoving.MobileBaseView
 */
 
-	Ember.ToolbarBaseView = Ember.MobileBaseView.extend({
+	EmberMoving.ToolbarBaseView = EmberMoving.MobileBaseView.extend({
 		attributeBindings:['data-position'],
 		'data-position': function() {
 			if (this.get('isFullScreen')) {
@@ -87,9 +83,7 @@
 		isFixed: true,
 		isFullsScreen: false
 	});
-})({});
 
-(function(exports) {
 // ==========================================================================
 // Project:  Ember - JQ Mobile
 // Copyright: ©2012 Tolbard and contributors.
@@ -104,16 +98,14 @@
   Note: The plan is to add additional all the specific page attributs
   attribut (with the default value)for the header jqm element.
 
-  @extends Ember.MobileBaseView
+  @extends EmberMoving.MobileBaseView
 */
 
-	Ember.HeaderView = Ember.ToolbarBaseView.extend({
+	EmberMoving.HeaderView = EmberMoving.ToolbarBaseView.extend({
 		'data-role': 'header'
 
 	});
-})({});
 
-(function(exports) {
 // ==========================================================================
 // Project:  Ember - JQ Mobile
 // Copyright: ©2012 Tolbard and contributors.
@@ -127,15 +119,13 @@
   Note: The plan is to add additional all the specific page attributs
   attribut (with the default value)for the content jqm element.
 
-  @extends Ember.MobileBaseView
+  @extends EmberMoving.MobileBaseView
 */
 
-	Ember.ContentView = Ember.MobileBaseView.extend({
+	EmberMoving.ContentView = EmberMoving.MobileBaseView.extend({
 		'data-role': 'content'
 	});
-})({});
 
-(function(exports) {
 // ==========================================================================
 // Project:  Ember - JQ Mobile
 // Copyright: ©2012 Tolbard and contributors.
@@ -150,10 +140,10 @@
   Note: The plan is to add additional all the specific page attributs
   attribut (with the default value)for the Footer jqm element.
 
-  @extends Ember.MobileBaseView
+  @extends EmberMoving.MobileBaseView
 */
 
-	Ember.FooterView = Ember.MobileBaseView.extend({
+	EmberMoving.FooterView = EmberMoving.MobileBaseView.extend({
 		'data-role': 'footer',
 		attributeBindings:['data-position'],
 		'data-position': function() {
@@ -165,10 +155,8 @@
 
 		isFixed: true
 	});
-})({});
 
 
-(function(exports) {
 // ==========================================================================
 // Project:  Ember - JQ Mobile
 // Copyright: ©2012 Tolbard and contributors.
@@ -185,7 +173,7 @@
   @extends Ember.View
 */
 
-	Ember.ListItemView = Ember.MobileBaseView.extend({
+	EmberMoving.ListItemView = EmberMoving.MobileBaseView.extend({
 		tagName: 'li'/*,
 		classNames: [],
 		attributeBindings:['data-corners','data-shadow','data-inline','data-wrapperels','data-icon'],
@@ -198,9 +186,7 @@
 		'data-iconpos':'right'*/
 
 	});
-})({});
 
-(function(exports) {
 // ==========================================================================
 // Project:  Ember - JQ Mobile
 // Copyright: ©2012 Tolbard and contributors.
@@ -217,7 +203,7 @@
   @extends Ember.View
 */
 
-	Ember.ListView = Ember.CollectionView.extend({
+	EmberMoving.ListView = Ember.CollectionView.extend({
     attributeBindings: ['data-role', 'data-theme'],
     'data-role':'listview',
     tagName: 'ul',
@@ -242,7 +228,6 @@
         });
     }.observes('content.length')
 });
-})({});
 
 
 
